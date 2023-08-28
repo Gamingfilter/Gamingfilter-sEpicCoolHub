@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check out My Twitch Channel!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .advertisement {
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .twitch-logo {
+      width: 100px;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #9146ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="advertisement">
+    <img class="twitch-logo" src="https://static-cdn.jtvnw.net/jtv_user_pictures/gamingfilter-profile_image-1cb8c7e0bb3d0801-70x70.png" alt="Twitch Logo">
+    <h2>Join Me on Twitch!</h2>
+    <p>Hey there! I'm streaming awesome gaming content on Twitch. Come hang out and have some fun with me!</p>
+    <a class="button" href="https://www.twitch.tv/gamingfilter" target="_blank">Watch Now</a>
+  </div>
+</body>
+</html>
