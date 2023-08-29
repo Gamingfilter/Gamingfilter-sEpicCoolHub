@@ -1,4 +1,3 @@
-# GamingfilterTheGuy.github.io
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +39,24 @@
       color: white;
       text-decoration: none;
     }
+    .youtube {
+      background-color: #FF0000;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .link {
+      color: white;
+      text-decoration: none;
+    }
+    .image-container {
+      text-align: center;
+    }
+    .image {
+      max-width: 100px;
+    }
   </style>
 </head>
 <body>
@@ -51,7 +68,7 @@
   <div class="container">
     <div class="content">
       <h2>About Me</h2>
-      <p>Hello there! I'm passionate about gaming and sharing my experiences with others. I am dutch, so you could also talk with me about dutch things, but keep it in english allright? good. If I'm live you could join me on my Twitch channel for exciting gameplay and engaging discussions. But yeah, I hope yall have fun!</p>
+      <p>Hello there! I'm passionate about gaming and sharing my experiences with others. I am Dutch, so you could also talk with me about Dutch things, but keep it in English, alright? Good. If I'm live, you could join me on my Twitch channel for exciting gameplay and engaging discussions. But yeah, I hope y'all have fun!</p>
       
       <h2>Latest Streams</h2>
       <ul>
@@ -65,18 +82,19 @@
     
     <div class="discord">
       <h2>Join Our Discord Community</h2>
-  <div class="image-container">
+      <div class="image-container">
         <img class="image" src="https://cdn.frankerfacez.com/emoticon/480399/2" alt="Discord Logo">
+      </div>
       <p>Connect with some amazing people on our Discord server! Share your thoughts, engage in discussions, and stay updated on the latest happenings such as when I am streaming and more!</p>
       <p><a class="discord-link" href="https://discord.gg/Gdq42xcZ9E" target="_blank">Join Now</a></p>
     </div>
 
     <div class="youtube">
       <h2>Subscribe to My YouTube Channel</h2>
- <div class="image-container">
+      <div class="image-container">
         <img class="image" src="https://cdn.frankerfacez.com/emoticon/480399/2" alt="YouTube Logo">
       </div>
-      <p>Check out my gaming content on YouTube! Here I make mostly brawlstars content, but also memes and more! Subscribe to my channel for videos that could surely give you atleast 20 secconds of enjoyment.</p>
+      <p>Check out my gaming content on YouTube! Here I make mostly Brawl Stars content, but also memes and more! Subscribe to my channel for videos that could surely give you at least 20 seconds of enjoyment.</p>
       <p><a class="link" href="https://www.youtube.com/@GamingFilterW/about" target="_blank">Subscribe Now</a></p>
     </div>  
   </div>
