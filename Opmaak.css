@@ -73,6 +73,10 @@ header {
   max-width: 100px;
 }
 
+.image2 {
+  max-width: 500px;
+}
+
 h2 {
   margin-top: 0;
 }
