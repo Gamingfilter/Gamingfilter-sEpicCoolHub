@@ -39,8 +39,7 @@ header {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  margin-top: 20px;
-  position: center;
+  margin: 20px auto;
   overflow: hidden;
   max-width: 700px;
 }
