@@ -41,7 +41,7 @@ header {
   text-align: center;
   margin: 20px auto;
   overflow: hidden;
-  max-width: 1000px;
+  width: 1000px;
 }
 
 .discord {
