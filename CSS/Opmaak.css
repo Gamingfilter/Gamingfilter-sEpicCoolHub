@@ -16,8 +16,6 @@ header {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
-  font-family: Arial;
-  font-size: 130%;
 }
 
 .content {
@@ -25,6 +23,10 @@ header {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  font-size: 130%;
 }
 
 .advertisement {
