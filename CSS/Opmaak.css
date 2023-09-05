@@ -16,6 +16,7 @@ header {
   max-width: 960px;
   margin: 0 auto;
   padding: 20px;
+  font-fammily: Arial;
 }
 
 .content {
@@ -95,8 +96,3 @@ h2 {
   text-decoration: none;
   border-radius: 5px;
 }
-<style>
-p{
-  font-family: Arial;
-}
-</style>
