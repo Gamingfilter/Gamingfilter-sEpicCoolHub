@@ -31,12 +31,12 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   max-width: 600px;
-  position: center;
-  text-align: center;
+  position: middle;
+  text-align: middle;
 }
 
 audio {
-  position: center;
+  position: middle;
 }
 
 p  {
