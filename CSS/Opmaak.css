@@ -33,7 +33,7 @@ header {
  text-align: center;
 }
 
-p  {
+p, li {
   font-family: Arial;
   font-size: 130%;
 }
