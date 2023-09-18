@@ -12,11 +12,12 @@ header {
   padding: 10px 0;
 }
 
-.desktop-images (min-width: 768px) {
+.desktop-images {
   display: none;
 }
 
-  .desktop-images (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .desktop-images {
     display: block;  
     margin-left: 20px; 
   }
@@ -29,12 +30,13 @@ header {
     float: left;
   }
 
-  .desktop-images (min-width: 768px) img {
+  .desktop-images img {
     max-width: 10%;
     height: auto;
     display: block;
     margin-bottom: 10px;
   }
+}
 
 .container {
   max-width: 960px;
