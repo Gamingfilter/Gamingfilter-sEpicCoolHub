@@ -16,7 +16,6 @@ header {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
   .desktop-images {
     display: block;  
     margin-left: 20px; 
@@ -34,8 +33,7 @@ header {
     height: auto;
     display: block;
     margin-bottom: 10px;
-}
-}
+  }
 
 .container {
   max-width: 960px;
