@@ -12,6 +12,26 @@ header {
   padding: 10px 0;
 }
 
+/* Styles for desktop images */
+.desktop-images {
+  display: none; /* Hide the images by default */
+}
+
+/* Show the images on screens with a minimum width of 768px (adjust as needed) */
+@media screen and (min-width: 768px) {
+  .desktop-images {
+    display: block; 
+    float: right; 
+    margin-left: 20px; 
+  }
+
+  /* Style for individual images */
+  .desktop-images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
 .container {
   max-width: 960px;
   margin: 0 auto;
