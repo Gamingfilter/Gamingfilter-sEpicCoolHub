@@ -12,14 +12,15 @@ header {
   padding: 10px 0;
 }
 
-.desktop-images {
+.desktop-images (min-width: 768px) {
   display: none;
 }
 
-  .desktop-images {
+  .desktop-images (min-width: 768px) {
     display: block;  
     margin-left: 20px; 
   }
+  
   .right { 
     float: right;
   }
@@ -28,8 +29,8 @@ header {
     float: left;
   }
 
-  .desktop-images {
-    width: 500px;
+  .desktop-images (min-width: 768px) {
+    max-width: 300px;
     height: auto;
     display: block;
     margin-bottom: 10px;
