@@ -29,12 +29,14 @@ header {
     float: left;
   }
 
-  .desktop-images img {
-    max-width: 100px;
+  .desktop-images {
+    max-width: 500px;
     height: auto;
     display: block;
     margin-bottom: 10px;
 }
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
