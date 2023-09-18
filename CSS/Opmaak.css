@@ -20,7 +20,7 @@ header {
     display: block;  
     margin-left: 20px; 
   }
-  
+
   .right { 
     float: right;
   }
@@ -30,7 +30,7 @@ header {
   }
 
   .desktop-images (min-width: 768px) {
-    max-width: 300px;
+    max-width: 10%;
     height: auto;
     display: block;
     margin-bottom: 10px;
