@@ -12,6 +12,7 @@ header {
   padding: 10px 0;
 }
 
+/*possible code: 
 .desktop-images {
   display: none;
 }
@@ -37,7 +38,7 @@ header {
     margin-bottom: 10px;
   }
 }
-
+*/
 .container {
   max-width: 960px;
   margin: 0 auto;
