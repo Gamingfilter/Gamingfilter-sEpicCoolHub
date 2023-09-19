@@ -12,33 +12,45 @@ header {
   padding: 10px 0;
 }
 
-/*possible code: 
-.desktop-images {
+ 
+.desktop-imagesL {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .desktop-images {
+  .desktop-imagesL {
     display: block;  
     margin-left: 20px; 
   }
 
-  .right { 
-    float: right;
-  }
-  
-  .left {
-    float: left;
-  }
-
-  .desktop-images img {
-    max-width: 10%;
+  .desktop-imagesL img {
+    max-width: 200px;
     height: auto;
     display: block;
     margin-bottom: 10px;
+    float: right;
   }
 }
-*/
+
+.desktop-imagesR {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .desktop-imagesR {
+    display: block;  
+    margin-left: 20px; 
+  }
+
+  .desktop-imagesR img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    float: right;
+  }
+}
+
 .container {
   max-width: 960px;
   margin: 0 auto;
