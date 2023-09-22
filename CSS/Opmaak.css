@@ -13,26 +13,7 @@ header {
   padding: 10px 0;
 }
 
-/*Code image on the left side*/ 
-.desktop-imagesL {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .desktop-imagesL {
-    display: block;  
-    margin-left: 20px; 
-  }
-
-  .desktop-imagesL img {
-    max-width: 140px;
-    height: auto;
-    display: block;
-    margin-bottom: 10px;
-    float: left;
-  }
-}
-/*and on the right side*/
+/*Side image on the right side*/
 .desktop-imagesR {
   display: none;
 }
@@ -50,6 +31,15 @@ header {
     margin-bottom: 10px;
     float: right;
   }
+}
+/*Side menu*/
+@media screen and (min-width:768px){
+nav {
+  float: left;
+  width: 20%;
+  background: #3f72bf;
+  padding: 20px;  
+}
 }
 /*For the little boxes you see*/
 .container {
