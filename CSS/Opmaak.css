@@ -21,7 +21,7 @@ header {
 @media screen and (min-width: 768px) {
   .desktop-imagesR {
     display: block;  
-    margin-left: 20px; 
+    margin-left: 10px; 
   }
 
   .desktop-imagesR img {
@@ -35,9 +35,9 @@ header {
 /*Side menu*/
 @media screen and (min-width:768px){   
 aside {
-  margin-right: 15px;
+  margin-right: 1px;
   float: left;
-  width: 140px;
+  width: 100px;
   background: #3f72bf;
   padding: 20px; 
 }
