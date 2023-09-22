@@ -1,10 +1,11 @@
+/* Main Font and background*/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #556eab;
 }
-
+/*For the header*/
 header {
   background-color: #2b55bd;
   color: #eeedf0;
@@ -12,7 +13,7 @@ header {
   padding: 10px 0;
 }
 
- 
+/*Code image on the left side*/ 
 .desktop-imagesL {
   display: none;
 }
@@ -24,14 +25,14 @@ header {
   }
 
   .desktop-imagesL img {
-    max-width: 150px;
+    max-width: 140px;
     height: auto;
     display: block;
     margin-bottom: 10px;
     float: left;
   }
 }
-
+/*and on the right side*/
 .desktop-imagesR {
   display: none;
 }
@@ -43,14 +44,14 @@ header {
   }
 
   .desktop-imagesR img {
-    max-width: 150px;
+    max-width: 140px;
     height: auto;
     display: block;
     margin-bottom: 10px;
     float: right;
   }
 }
-
+/*For the little boxes you see*/
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -63,7 +64,7 @@ header {
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
+/*Make it go to the center*/
 .center {
  margin: 0 auto;
  display: flex;
@@ -71,12 +72,12 @@ header {
  align-items: center;
  text-align: center;
 }
-
+/*Normal font for text etc*/
 p, li {
   font-family: Arial;
   font-size: 130%;
 }
-
+/*for the twitch box*/
 .advertisement {
   background-color: #f1f1f1;
   padding: 20px;
@@ -85,7 +86,7 @@ p, li {
   max-width: 400px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
+/*For the collored boxes*/
 .discord, .youtube, .deviantart, .tiktok, .twitter {
   color: white;
   padding: 10px;
@@ -116,7 +117,7 @@ p, li {
 .twitter {
   background-color: #31e8eb;
 }
-
+/*Links & images (and also a header)*/
 .link {
   color: #6e38c9;
   text-decoration: none;
