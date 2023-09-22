@@ -33,12 +33,13 @@ header {
   }
 }
 /*Side menu*/
-@media screen and (min-width:768px){
-nav {
+@media screen and (min-width:768px){   
+aside {
+  margin-right: 15px;
   float: left;
-  width: 20%;
+  width: 140px;
   background: #3f72bf;
-  padding: 20px;  
+  padding: 20px; 
 }
 }
 /*For the little boxes you see*/
