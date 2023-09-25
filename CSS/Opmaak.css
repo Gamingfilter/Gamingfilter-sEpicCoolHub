@@ -46,7 +46,7 @@ aside {
 }
 /*For the little boxes you see*/
 .container {
-  max-width: 960px;
+  max-width: 960px, 90%;
   margin: 0 auto;
   padding: 20px;
 }
