@@ -37,7 +37,7 @@ header {
 aside {
   margin-right: 1px;
   float: left;
-  max-width: 140px;
+  max-width: 100px;
   padding: 20px; 
   position: fixed;
   min-height: 100%;
@@ -45,7 +45,7 @@ aside {
 }
 /*For the little boxes you see*/
 .container {
-  max-width: 90%;
+  max-width: 600px, 90%;
   margin: 0 auto;
   padding: 20px;
 }
