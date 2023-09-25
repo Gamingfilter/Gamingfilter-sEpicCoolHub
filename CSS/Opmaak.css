@@ -32,15 +32,17 @@ header {
     float: right;
   }
 }
-/*Side menu*/ /* possible
+/*Side menu*/
 @media screen and (min-width:768px){   
 aside {
   margin-right: 1px;
   float: left;
-  width: 100px;
+  max-width: 140px;
   background: #3f72bf;
   padding: 20px; 
-} */
+  position: fixed;
+  min-height: 100%;
+} 
 }
 /*For the little boxes you see*/
 .container {
