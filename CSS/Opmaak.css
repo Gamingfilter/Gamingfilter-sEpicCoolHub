@@ -43,9 +43,11 @@ aside {
   min-height: 100%;
 } 
 }
+
 /*For the little boxes you see*/
 .container {
-  max-width: 600px, 90%;
+  max-width: 90%;
+  width: 900px;
   margin: 0 auto;
   padding: 20px;
 }
