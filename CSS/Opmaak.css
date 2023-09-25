@@ -37,11 +37,17 @@ header {
 aside {
   margin-right: 1px;
   float: left;
-  max-width: 100px;
+  max-width: 300px;
   padding: 20px; 
   position: fixed;
   min-height: 100%;
+}
+article {
+  flex: 5;
 } 
+nav {
+  flex: 1;
+}
 }
 
 /*For the little boxes you see*/
