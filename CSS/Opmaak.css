@@ -14,21 +14,26 @@ header {
 }
 /*etc*/
 /*Side image on the right side*/
-.desktop-imagesR {
+.desktop-imagesR, .desktop-imageL {
   display: none;
 }
 
 @media screen and (min-width: 768px) { /*alleen bepaalde schermen*/
-  .desktop-imagesR {
+  .desktop-imagesR, .desktop-imageL {
     display: block;  
     margin-left: 10px; 
   }
 
-  .desktop-imagesR img {
+  .desktop-imagesR img, .desktop-imageL img {
     max-width: 140px;
     height: auto;
     display: block;
     margin-bottom: 10px;
+  }
+  .desktop-imageL {
+    float: left;
+  }
+  .desktop-imagesR {
     float: right;
   }
 }
