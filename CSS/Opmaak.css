@@ -41,7 +41,7 @@ header {
 @media screen and (min-width: 786px) {
   .topnav {
     overflow: hidden;
-    background-color: #3562ab;
+    background-color: #4e67bf;
   }
   
   .topnav a {
@@ -54,14 +54,14 @@ header {
   }
   
   .topnav a:hover {
-    background-color: #4f63c9;
+    background-color: #5874db;
     text-decoration: underline;
     position: sticky;
     color: #192c8c;
   }
   
   .topnav a.active {
-    background-color: #4f63c9;
+    background-color: #5874db;
     color: #192c8c;
   }
 }
