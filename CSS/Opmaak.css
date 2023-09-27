@@ -19,11 +19,14 @@ header {
 }
 
 @media screen and (min-width: 768px) { /*alleen bepaalde schermen*/
-  .desktop-imagesR, .desktop-imageL {
+ .desktop-imageL {
     display: block;  
     margin-left: 10px; 
   }
-
+ .desktop-imagesR {
+  display: block;
+  margin-right: 10px;
+ }
   .desktop-imagesR img, .desktop-imageL img {
     max-width: 140px;
     height: auto;
