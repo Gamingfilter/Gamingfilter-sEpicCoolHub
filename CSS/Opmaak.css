@@ -37,29 +37,13 @@ header {
     float: right;
   }
 }
-.list {
-  display: none;
-}
-.topnav {
-  display: none;
-}
-/*Making the list of pages.*/
-@media screen and (max-width: 786px) {
-  .List {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 786px) {
   .topnav {
     overflow: hidden;
     background-color: #4e67bf;
-    display: block;
   }
   
   .topnav a {
     float: left;
-    display: block;
     color: #131729;
     text-align: center;
     padding: 14px 16px;
@@ -77,7 +61,6 @@ header {
     background-color: #5874db;
     color: #192c8c;
   }
-}
 /*For the little boxes you see*/
 .container {
   max-width: 90%;
