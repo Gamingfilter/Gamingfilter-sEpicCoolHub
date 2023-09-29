@@ -30,15 +30,15 @@ display: none;
   margin-right: 10px;
  }
   .desktop-imagesR img{
-    max-width: 200px;
-    width: 200px;
+    max-width: 600px;
+    width: 600px;
     height: auto;
     display: block;
     margin-bottom: 10px;
   }
   .desktop-imagesL img{
-    width: 200px;
-    max-width: 200px;
+    width: 600px;
+    max-width: 600px;
     height: auto;
     display: block;
     margin-bottom: 10px;
