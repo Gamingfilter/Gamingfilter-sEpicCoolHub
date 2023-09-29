@@ -161,8 +161,8 @@ p, li {
 }
 
 .Goal {
-  max-width: 1480px;
-  max-height: 160px
+  width: 1480px;
+  height: 160px
 }
 
 h2 {
