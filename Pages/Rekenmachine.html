@@ -1,209 +1,70 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Math isn't meth guys</title>
-  <link rel="stylesheet" href="..//CSS/Opmaak.css">
-    </head>
-    <body>
-        <div class="topnav">
-            <a href="..//index.html">Home page</a>
-            <a href="Binairestelsel.html">Binary system</a>
-            <a href="Compressie.html">Compression</a>
-            <a href="Kleurmodellen.html">Color models</a>
-            <a href="Gallery.html">My gallery</a>
-            <a href="AboutMe.html">My about me page</a>
-            <a class="active" href="Rekenmachine.html">Calculator</a>
-            </div>
-<script>
-function main() {
-    // Deze rekenmachine werkt van rechts naar links, dus wees daarop gewaarschuwd
-    // Advanceerd rekenmachine
-    let tekencorrect;
-    
-    // Checken of er een acceptabele teken is
-    let wortelGrootte;
-    
-    // Best wel vanzelfsprekend
-    let modulo;
-    let nummerModulo;
-    let w;
-    
-    // Letters voor aantal tekens/cijfers etc
-    let machtgrote;
-    let x;
-    
-    x = 1;
-    let y;
-    
-    y = 1;
-    let f;
-    let aantal;
-    
-    aantal = window.prompt('Enter a value for aantal');
-    if (aantal <= 1) {
-        while (aantal <= 0) {
-            
-            // Je moet een aantal invullen, niet - getallen of 0
-            window.alert("Voer een geldig aantal in (groter dan 0)");
-            aantal = window.prompt('Enter a value for aantal');
-        }
-        if (aantal == 1) {
-            
-            // F = 1 voor verkomen crashen
-            f = 1;
-        } else {
-            f = 0;
-        }
-    } else {
-        f = 0;
-    }
-    let cijfers = createArray(aantal);
-    let tekens = createArray(aantal - 1 + f);
-    
-    tekens[0] = "Niet belangrijk";
-    cijfers[x - 1] = window.prompt('Enter a value for cijfers[x - 1]');
-    let wortel;
-    
-    wortel = window.prompt('Enter a value for wortel');
-    let macht;
-    
-    macht = window.prompt('Enter a value for macht');
-    if (wortel) {
-        if (macht) {
-            machtgrote = window.prompt('Enter a value for machtgrote');
-            wortelGrootte = window.prompt('Enter a value for wortelGrootte');
-            while (wortelGrootte == 0) {
-                window.alert("Vul een correcte wortelgrootte in.");
-                wortelGrootte = window.prompt('Enter a value for wortelGrootte');
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../CSS/Opmaak.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="../index.html">Home page</a>
+        <a href="Binairestelsel.html">Binary system</a>
+        <a href="Compressie.html">Compression</a>
+        <a href="Kleurmodellen.html">Color models</a>
+        <a href="Gallery.html">My gallery</a>
+        <a href="AboutMe.html">My about me page</a>
+        <a class="active" href="Rekenmachine.html">Calculator</a>
+    </div>
+
+    <script>
+        function main() {
+            let aantal = parseInt(prompt('Enter a value for aantal'));
+
+            while (aantal <= 0 || isNaN(aantal)) {
+                aantal = parseInt(prompt('Please enter a valid number greater than 0'));
             }
-            cijfers[0] = Math.pow(cijfers[0], machtgrote);
-            cijfers[x - 1] = Math.pow(cijfers[x - 1], 1 / wortelGrootte);
-        } else {
-            wortelGrootte = window.prompt('Enter a value for wortelGrootte');
-            while (wortelGrootte == 0) {
+
+            let cijfers = [];
+            let tekens = [];
+
+            for (let x = 0; x < aantal; x++) {
+                cijfers[x] = parseFloat(prompt(`Enter a value for cijfers[${x}]`));
+            }
+
+            let antwoord = cijfers[0];
+
+            for (let y = 1; y < aantal; y++) {
+                let teken = prompt('Enter a valid operator (+, -, *, /)');
+
+                while (!['+', '-', '*', '/'].includes(teken)) {
+                    teken = prompt('Please enter a valid operator (+, -, *, /)');
+                }
+
+                tekens.push(teken);
+
+                let num = parseFloat(prompt(`Enter a value for cijfers[${y}]`));
                 
-                // Wortel 0 kan niet dus ze moeten een goede invullen
-                window.alert("Vul een correcte wortelgrootte in.");
-                wortelGrootte = window.prompt('Enter a value for wortelGrootte');
-            }
-            cijfers[x - 1] = Math.pow(cijfers[x - 1], 1 / wortelGrootte);
-        }
-    } else {
-        if (macht) {
-            machtgrote = window.prompt('Enter a value for machtgrote');
-            cijfers[0] = Math.pow(cijfers[0], machtgrote);
-        }
-    }
-    let z;
-    let antwoord;
-    
-    antwoord = cijfers[0];
-    
-    // Antwoord (voor als 1 cijfer en om later bij op te tellen
-    // Hier hetzelfde maar nu zijn er ook tekens bij
-    for (z = 1; z <= aantal - 1; z++) {
-        
-        // Zelfde als eerder maar nu ook nog plus de -, =, / en *
-        window.alert("Vul asltublieft een van deze tekens in: / (delen), * (keer), + (plus), - (min)");
-        tekens[y - 1] = window.prompt('Enter a value for tekens[y - 1]');
-        if (tekens[y - 1] == "-") {
-        } else {
-            if (tekens[y - 1] == "+") {
-            } else {
-                if (tekens[y - 1] == "/") {
-                } else {
-                    if (tekens[y - 1] == "*") {
-                    } else {
-                        tekencorrect = true;
-                        window.alert("Vul asltublieft een van deze tekens in: / (delen), * (keer), + (plus), - (min)");
-                        while (tekencorrect == true) {
-                            tekens[y - 1] = window.prompt('Enter a value for tekens[y - 1]');
-                            if (tekens[y - 1] == "-") {
-                                tekencorrect = false;
-                            } else {
-                                if (tekens[y - 1] == "+") {
-                                    tekencorrect = false;
-                                } else {
-                                    if (tekens[y - 1] == "/") {
-                                        tekencorrect = false;
-                                    } else {
-                                        if (tekens[y - 1] == "*") {
-                                            tekencorrect = false;
-                                        } else {
-                                            tekencorrect = true;
-                                            
-                                            // Voor het checken of het een geldig teken is
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                if (teken === '+') {
+                    antwoord += num;
+                } else if (teken === '-') {
+                    antwoord -= num;
+                } else if (teken === '*') {
+                    antwoord *= num;
+                } else if (teken === '/') {
+                    if (num === 0) {
+                        alert('Division by zero is not allowed');
+                        return; // exit function
                     }
+                    antwoord /= num;
                 }
             }
+
+            alert(`The answer to your calculation is: ${antwoord}`);
         }
-        x = x + 1;
-        cijfers[x - 1] = window.prompt('Enter a value for cijfers[x - 1]');
-        modulo = window.prompt('Enter a value for modulo');
-        wortel = window.prompt('Enter a value for wortel');
-        macht = window.prompt('Enter a value for macht');
-        if (wortel) {
-            if (macht) {
-                machtgrote = window.prompt('Enter a value for machtgrote');
-                wortelGrootte = window.prompt('Enter a value for wortelGrootte');
-                while (wortelGrootte == 0) {
-                    window.alert("Vul een correcte wortelgrootte in.");
-                    wortelGrootte = window.prompt('Enter a value for wortelGrootte');
-                }
-                cijfers[x - 1] = Math.pow(cijfers[x - 1], 1 / wortelGrootte);
-                cijfers[x - 1] = Math.pow(cijfers[x - 1], machtgrote);
-            } else {
-                wortelGrootte = window.prompt('Enter a value for wortelGrootte');
-                while (wortelGrootte == 0) {
-                    window.alert("Vul een correcte wortelgrootte in.");
-                    wortelGrootte = window.prompt('Enter a value for wortelGrootte');
-                }
-                cijfers[x - 1] = Math.pow(cijfers[x - 1], 1 / wortelGrootte);
-            }
-        } else {
-            if (macht) {
-                machtgrote = window.prompt('Enter a value for machtgrote');
-                cijfers[x - 1] = Math.pow(cijfers[x - 1], machtgrote);
-            }
-        }
-        if (tekens[y - 1] == "*") {
-            antwoord = antwoord * cijfers[x - 1];
-        } else {
-            if (tekens[y - 1] == "/") {
-                while (cijfers[x - 1] == 0) {
-                    window.alert("Vul alstublieft een geldig getal in");
-                    cijfers[x - 1] = window.prompt('Enter a value for cijfers[x - 1]');
-                }
-                if (modulo) {
-                    antwoord = antwoord % cijfers[x - 1];
-                } else {
-                    antwoord = antwoord / cijfers[x - 1];
-                }
-            } else {
-                if (tekens[y - 1] == "-") {
-                    antwoord = antwoord - cijfers[x - 1];
-                } else {
-                    if (tekens[y - 1] == "+") {
-                        antwoord = antwoord + cijfers[x - 1];
-                    } else {
-                        window.alert("Dit zou niet mogelijk moeten zijn");
-                    }
-                }
-            }
-        }
-        if (y == aantal) {
-        } else {
-            y = y + 1;
-        }
-    }
-    window.alert("Het antwoord op uw berekening is " + antwoord + "");
-}
-</script>
+
+        main(); // Call the main function when the page loads
+    </script>
 </body>
 </html>
