@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +19,7 @@
 
     <script>
         function main() {
-            let aantal = parseInt(prompt('Enter a value for aantal'));
+            let aantal = parseInt(prompt('Enter a value for amount'));
 
             while (aantal <= 0 || isNaN(aantal)) {
                 aantal = parseInt(prompt('Please enter a valid number greater than 0'));
@@ -30,34 +29,52 @@
             let tekens = [];
 
             for (let x = 0; x < aantal; x++) {
-                cijfers[x] = parseFloat(prompt(`Enter a value for cijfers[${x}]`));
+                cijfers[x] = parseFloat(prompt(`Enter a value for numbers[${x}]`));
             }
 
             let antwoord = cijfers[0];
 
             for (let y = 1; y < aantal; y++) {
-                let teken = prompt('Enter a valid operator (+, -, *, /)');
+                let teken = prompt('Enter a valid operator (+, -, *, /, %, ^, √)');
 
-                while (!['+', '-', '*', '/'].includes(teken)) {
-                    teken = prompt('Please enter a valid operator (+, -, *, /)');
+                while (!['+', '-', '*', '/', '%', '^', '√'].includes(teken)) {
+                    teken = prompt('Please enter a valid operator (+, -, *, /, %, ^, √)');
                 }
 
                 tekens.push(teken);
 
-                let num = parseFloat(prompt(`Enter a value for cijfers[${y}]`));
-                
-                if (teken === '+') {
-                    antwoord += num;
-                } else if (teken === '-') {
-                    antwoord -= num;
-                } else if (teken === '*') {
-                    antwoord *= num;
-                } else if (teken === '/') {
-                    if (num === 0) {
-                        alert('Division by zero is not allowed');
+                let num = parseFloat(prompt(`Enter a value for numbers[${y}]`));
+                let result;
+
+                switch (teken) {
+                    case '+':
+                        antwoord += num;
+                        break;
+                    case '-':
+                        antwoord -= num;
+                        break;
+                    case '*':
+                        antwoord *= num;
+                        break;
+                    case '/':
+                        if (num === 0) {
+                            alert('Division by zero is not allowed');
+                            return; // exit function
+                        }
+                        antwoord /= num;
+                        break;
+                    case '%':
+                        antwoord %= num;
+                        break;
+                    case '^':
+                        antwoord = Math.pow(antwoord, num);
+                        break;
+                    case '√':
+                        antwoord = Math.pow(antwoord, 1 / num);
+                        break;
+                    default:
+                        alert('Invalid operator');
                         return; // exit function
-                    }
-                    antwoord /= num;
                 }
             }
 
