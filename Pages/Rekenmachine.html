@@ -28,23 +28,23 @@
                 aantal = parseInt(prompt('Please enter a valid number greater than 0'));
             }
 
-            let cijfers = [];
-            let tekens = [];
+            let numbers = [];
+            let operators = [];
 
             for (let x = 0; x < aantal; x++) {
                 cijfers[x] = parseFloat(prompt(`Enter a value for numbers[${x}]`));
             }
 
-            let antwoord = cijfers[0];
+            let antwoord = numbers[0];
 
             for (let y = 1; y < aantal; y++) {
-                let teken = prompt('Enter a valid operator (+, -, *, /, %, ^, √)');
+                let operators = prompt('Enter a valid operator (+, -, *, /, %, ^, √)');
 
                 while (!['+', '-', '*', '/', '%', '^', '√'].includes(teken)) {
-                    teken = prompt('Please enter a valid operator (+, -, *, /, %, ^, √)');
+                   let operators = prompt('Please enter a valid operator (+, -, *, /, %, ^, √)');
                 }
 
-                tekens.push(teken);
+                operators.push(operators);
 
                 let num = parseFloat(prompt(`Enter a value for numbers[${y}]`));
                 let result;
