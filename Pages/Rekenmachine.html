@@ -15,6 +15,7 @@
         <a href="Gallery.html">My gallery</a>
         <a href="AboutMe.html">My about me page</a>
         <a class="active" href="Rekenmachine.html">Calculator</a>
+        <a href="Bubblesort.html">Bubblesort</a>
     </div>
 <div class="container">
     <div class="content">
@@ -48,13 +49,10 @@
                 switch (teken) {
                     case '%':
                         numbers[x] %= num;
-                        break;
                     case '^':
                         numbers[x] = Math.pow(numbers[x], num);
-                        break;
                     case '√':
                         numbers[x] = Math.pow(numbers[x], 1 / num);
-                        break;
                 }
                 let operators = prompt('Enter another valid operator (+, -, *, /)')
 
@@ -71,13 +69,10 @@
                 switch (teken) {
                     case '+':
                         antwoord += num;
-                        break;
                     case '-':
                         antwoord -= num;
-                        break;
                     case '*':
                         antwoord *= num;
-                        break;
                     case '/':
                         if (num === 0) {
                             alert('Division by zero is not allowed');
