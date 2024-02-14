@@ -34,7 +34,7 @@
     let i;
     let row;
     
-    row = window.prompt('Enter a value for the amount of numbers');
+    row = parseInt(prompt('Enter a value for the amount of numbers'));
     let z;
     
     z = 0;
@@ -53,9 +53,9 @@
         k = k + 1;
     }
     if (z == 30) {
-        window.alert("Number was not found in the random string of numbers");
+        alert(`Number was not found in the random string of numbers`);
     } else {
-        window.alert("" + rij + " Found on the " + plek + "th place in the string");
+        alert(`" + rij + " Found on the " + plek + "th place in the string`);
     }
     let placeholder;
     let counter;
@@ -73,10 +73,9 @@
     }
     counter = 0;
     for (counter = 0; counter <= 29; counter++) {
-        window.alert(number[counter]);
+        alert(number[counter]);
     }
 }
-
         </script>
     </body>
 </html>
