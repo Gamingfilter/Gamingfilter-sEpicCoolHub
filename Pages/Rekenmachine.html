@@ -40,13 +40,13 @@
             let antwoord = numbers[0];
 
             for (let y = 1; y < amount; y++) {
-                let operators = prompt('Enter a valid operator (+, -, *, /, %, ^, √)');
-
-                while (!['+', '-', '*', '/', '%', '^', '√',].includes(teken)) {
-                   let operators = prompt('Please enter a valid operator (+, -, *, /, %, ^, √)');
+                let operators = parseInt(prompt('Enter a valid operator (+, -, *, /, %, ^, √)'));
+            
+                while (!['+', '-', '*', '/', '%', '^', '√'].includes(teken)) {
+                   let operators = parseInt(prompt('Please enter a valid operator (+, -, *, /, %, ^, √)'));
                 }
-
-                while (['%', '^', '√',].includes(teken)); {
+            
+                while (['%', '^', '√'].includes(teken)); {
                 switch (teken) {
                     case '%':
                         numbers[x] %= num;
@@ -59,7 +59,7 @@
 
                 }
             }
-            while (!['+', '-', '*', '/',].includes(teken)) {
+            while (!['+', '-', '*', '/'].includes(teken)) {
                    let operators = prompt('Please enter a valid operator (+, -, *, /)');
                 }
                 operators.push(operators);
