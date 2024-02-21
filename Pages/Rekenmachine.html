@@ -42,11 +42,11 @@
             for (let y = 1; y < amount; y++) {
                 let operators = parseInt(prompt('Enter a valid operator (+, -, *, /, %, ^, √)'));
             
-                while (!['+', '-', '*', '/', '%', '^', '√'].includes(teken)) {
+                while (!('+', '-', '*', '/', '%', '^', '√').includes(teken)) {
                    let operators = parseInt(prompt('Please enter a valid operator (+, -, *, /, %, ^, √)'));
                 }
             
-                while (['%', '^', '√'].includes(teken)); {
+                while (('%', '^', '√').includes(teken)); {
                 switch (teken) {
                     case '%':
                         numbers[x] %= num;
