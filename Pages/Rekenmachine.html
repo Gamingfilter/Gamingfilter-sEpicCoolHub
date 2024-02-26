@@ -53,7 +53,7 @@
                         let numbers[x] %= num;
                     case '^':
                         let numbers[x] = Math.pow(numbers[x], num);
-                    case '@':
+                    case '√':
                         let numbers[x] = Math.pow(numbers[x], 1 / num);
                 }
                 let operators = prompt('Enter another valid operator (+, -, *, /)')
@@ -76,15 +76,15 @@
                         result *= num;
                     case '/':
                         if (num === 0) {
-                            alert('Division by zero is not allowed');
+                            window.alert('Division by zero is not allowed');
                             return; // exit function
                         }
                         result /= num;
                         default:
-                        alert('Invalid operator');
+                        window.alert('Invalid operator');
                         return; // exit function
                     }
-            alert(`The answer to your calculation is ${result}`);
+            window.alert(`The answer to your calculation is ${result}`);
         }
     
         main(); // Call the main function when the page loads
