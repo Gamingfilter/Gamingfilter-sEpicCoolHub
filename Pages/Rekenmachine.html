@@ -49,11 +49,11 @@
                 while (('%', '^', '√').includes(teken)); {
                 switch (teken) {
                     case '%':
-                        numbers[x] %= num;
+                        let numbers[x] %= num;
                     case '^':
-                        numbers[x] = Math.pow(numbers[x], num);
+                        let numbers[x] = Math.pow(numbers[x], num);
                     case '@':
-                        numbers[x] = Math.pow(numbers[x], 1 / num);
+                        let numbers[x] = Math.pow(numbers[x], 1 / num);
                 }
                 let operators = prompt('Enter another valid operator (+, -, *, /)')
 
@@ -62,29 +62,28 @@
             while (!['+', '-', '*', '/'].includes(teken)) {
                    let operators = prompt('Please enter a valid operator (+, -, *, /)');
                 }
-                operators.push(operators);
 
                 let num = parseFloat(prompt(`Enter a value for numbers[${y}]`));
                 let result;
 
                 switch (teken) {
                     case '+':
-                        antwoord += num;
+                        result += num;
                     case '-':
-                        antwoord -= num;
+                        result -= num;
                     case '*':
-                        antwoord *= num;
+                        result *= num;
                     case '/':
                         if (num === 0) {
                             alert('Division by zero is not allowed');
                             return; // exit function
                         }
-                        antwoord /= num;
+                        result /= num;
                         default:
                         alert('Invalid operator');
                         return; // exit function
                     }
-            alert(`The answer to your calculation is ${antwoord}`);
+            alert(`The answer to your calculation is ${result}`);
         }
     
         main(); // Call the main function when the page loads
