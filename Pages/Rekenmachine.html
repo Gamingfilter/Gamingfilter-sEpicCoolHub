@@ -36,9 +36,6 @@
                 numbers[x] = parseFloat(prompt(`Enter a value for numbers[${x}]`));
             }
 
-            push.operators(operators)
-            let antwoord = numbers[0];
-
             for (let y = 1; y < amount; y++) {
                 let operators = parseInt(prompt('Enter a valid operator (+, -, *, /, %, ^, √)'));
             
@@ -47,25 +44,26 @@
                 }
             
                 while (('%', '^', '√').includes(teken)); {
+                    let num = parseFloat(prompt(`Enter a value for numbers[${y}]`));
                 switch (teken) {
                     case '%':
-                        let numbers[x] %= numbers[x];
+                        let numbers[x] %= num;
                     case '^':
                         let numbers[x] = Math.pow(numbers[x], num);
                     case '√':
                         let numbers[x] = Math.pow(numbers[x], 1 / num);
                 }
                 let operators = prompt('Enter another valid operator (+, -, *, /)')
-
                 }
             }
             while (!['+', '-', '*', '/'].includes(teken)) {
                    let operators = prompt('Please enter a valid operator (+, -, *, /)');
                 }
 
-                let num = parseFloat(prompt(`Enter a value for numbers[${y}]`));
-                let result;
-
+                let num = parseFloat(prompt(`Enter a value for the following number`));
+                if numbers[x] = numbers[0]{
+                let result = numbers[x]; 
+                }
                 switch (teken) {
                     case '+':
                         result += num;
@@ -75,16 +73,15 @@
                         result *= num;
                     case '/':
                         if (num === 0) {
-                            window.alert('Division by zero is not allowed');
+                            alert('Division by zero is not allowed');
                             return; // exit function
                         }
                         result /= num;
                         default:
-                        window.alert('Invalid operator');
+                        alert('Invalid operator');
                         return; // exit function
                     }
-            window.alert(`The answer to your calculation is ${result}`);
-        main(); // Call the main function when the page loads
+            alert(`The answer to your calculation is ${result}`);
     </script>
 </body>
 </html>
