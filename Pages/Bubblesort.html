@@ -25,12 +25,9 @@
         <script>
     let row = parseInt(prompt('Enter a value for the number you search'));
     let number = createArray(30);
-    let j;
+    number = Math.floor(Math.random()*100);
+    let j = 0;
     push.row(row)
-    j = 0;
-    for (j = 0; j <= 29; j++) {
-        number[j] = Math.floor(Math.random() * 100);
-    }
     let i;
     
     let z;
@@ -43,7 +40,7 @@
     
     for (i = 0; i <= 29; i++) {
         if (row == number[i]) {
-            place = i;
+            place = z + 1;
             i = 29;
         } else {
             z = z + 1;
@@ -53,7 +50,7 @@
     if (z == 30) {
         alert(`Number was not found in the random string of numbers`);
     } else {
-        alert(`" + rij + " Found on the " + plek + "th place in the string`);
+        alert(`" + row + " Found on the " + place + "th place in the string`);
     }
     let placeholder;
     let counter;
@@ -72,6 +69,11 @@
     counter = 0;
     for (counter = 0; counter <= 29; counter++) {
         alert('The number you filled in was found.');
+    }
+    let x = 0
+    for (x <= 29){
+    alert('" + number[x] + "');
+    let x = x + 1
     }
         </script>
     </body>
