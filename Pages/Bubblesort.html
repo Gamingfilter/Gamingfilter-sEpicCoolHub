@@ -23,7 +23,7 @@
         </div>
     </div>
         <script>
-    let row = parseInt(prompt('Enter a value for the number you search'));
+    let row = parseInt(prompt(`Enter a value for the number you search`));
     let number = createArray(30);
     number = Math.floor(Math.random()*100);
     let j = 0;
@@ -67,13 +67,9 @@
         }
     }
     counter = 0;
-    for (counter = 0; counter <= 29; counter++) {
-        alert('The number you filled in was found.');
-    }
-    let x = 0
-    for (x <= 29){
-    alert('" + number[x] + "');
-    let x = x + 1
+    let x = 0;
+    for (x = 0; x <= 29; counter++) {
+    alert(`" + number[x] + "`);
     }
         </script>
     </body>
