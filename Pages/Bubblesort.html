@@ -24,7 +24,11 @@
     </div>
         <script>
     let row = parseInt(prompt(`Enter a value for the number you search`));
-    const number = [Math.floor(Math.random(30)*100)];
+    const number = [];
+    let p;
+    for (p = 0; p <= 29; p++) {
+    number[p] = Math.floor(Math.random()*101);
+    }
     let j = 0;
     let i;
     
