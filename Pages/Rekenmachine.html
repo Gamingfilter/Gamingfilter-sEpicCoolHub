@@ -24,10 +24,12 @@
         </div>
         </div>
     <script>
+        let x = 0
         alert(`Test`);
-            let amount = parseInt(prompt(`Enter a value for the amount of numbers you wish to fill in`));
+            let amount = parseInt(prompt(`Enter a value for the amount of numbers`));
 
             let t = -1;
+            let l = 0;
             while (amount <= 0 || isNaN(amount)) {
                 amount = parseInt(prompt(`Please enter a valid number greater than 0`));
             }
@@ -36,14 +38,13 @@
             let numbers = [];
             let operators = [];
 
-            for (let x = 0; x < amount; x++) {
-                numbers[x] = parseFloat(prompt(`Enter a value for what number you want`));
+            for (let u = 0; x < amount; u++) {
+                numbers[u] = parseFloat(prompt(`Enter a value for what number you want`));
             }
 
             for (let y = 1; y < amount; y++) {
                 let operators = parseInt(prompt(`Enter a valid operator (+, -, *, /, %, ^, √)`));
-            
-                let t = t+1; 
+             
                 while (!(`+`, `-`, `*`, `/`, `%`, `^`, `√`).includes(teken)) {
                    let operators = parseInt(prompt(`Please enter a valid operator (+, -, *, /, %, ^, √)`));
                 }
@@ -52,41 +53,41 @@
                     let num = parseFloat(prompt(`Enter a value for the power/root/modulus`));
                 switch (teken) {
                     case `%`:
-                        let numbers[x] %= num;
+                        let numbers[t] %= num;
                     case `^`:
-                        let numbers[x] = Math.pow(numbers[x], num);
+                        let numbers[t] = Math.pow(numbers[t], num);
                     case `√`:
-                        let numbers[x] = Math.pow(numbers[x], 1 / num);
+                        let numbers[t] = Math.pow(numbers[t], 1 / num);
                 }
-                let operators = prompt(`Enter another valid operator (+, -, *, /)`)
+            
+                let operators = prompt(`Enter another valid operator (+, -, *, /)`);
                 }
             }
             while (![`+`, `-`, `*`, `/`].includes(teken)) {
                    let operators = prompt(`Please enter a valid operator (+, -, *, /)`);
                 }
 
-                let num = parseFloat(prompt(`Enter a value for the following number`));
                 if numbers[x] = numbers[0]{
-                let result = numbers[x]; 
+                result = numbers[x]; 
                 }
+                x = x + 1
                 switch (teken) {
                     case `+`:
-                        result += num;
+                        result += numbers[x+1];
                     case `-`:
-                        result -= num;
+                        result -= numbers[x+1];
                     case `*`:
-                        result *= num;
+                        result *= numbers[x+1];
                     case `/`:
-                        if (num === 0) {
+                        while (numbers[x+1] === 0) {
                             alert(`Division by zero is not allowed`);
-                            return; // exit function
+                            numbers[x+1]parseInt(prompt(`Fill in a valid number to divide by`))
                         }
                         result /= num;
-                        default:
-                        alert(`Invalid operator`);
-                        return; // exit function
+                        if amount != x+1
+                        return;
                     }
-            alert(`The answer to your calculation is` + result);
+            alert(`The answer to your calculation is` + result + );
     </script>
 </body>
 </html>
