@@ -55,36 +55,38 @@
                         switch (operator) {
                             case '%':
                                 result %= num;
-                                break;
+                                
                             case '^':
                                 result = Math.pow(result, num);
-                                break;
+                                
                             case '√':
                                 result = Math.pow(result, 1 / num);
-                                break;
                         }
-                    } else {
-                        num = parseFloat(prompt(`Enter a value for number ${y + 1}`));
+                    }
+                    while (!['+', '-', '*', '/'].includes(operator)) {
+                        operator = prompt(`Please enter a valid operator (+, -, *, /)`); 
+                    }
                         switch (operator) {
                             case '+':
-                                result += num;
+                                result += number[y+1];
                                 break;
                             case '-':
-                                result -= num;
+                                result -= number[y+1];
                                 break;
                             case '*':
-                                result *= num;
+                                result *= number[y+1];
                                 break;
                             case '/':
-                                while (num === 0) {
+                                while (number[y+1] === 0) {
                                     alert(`Division by zero is not allowed`);
-                                    num = parseFloat(prompt(`Fill in a valid number to divide by`));
+                                    number[y+1] = parseFloat(prompt(`Fill in a valid number to divide by`));
                                 }
-                                result /= num;
+                                result /= number[y+1];
                                 break;
                         }
                     }
-                }
+                
+
         
                 alert(`The answer to your calculation is: ${result}`);
             </script>
