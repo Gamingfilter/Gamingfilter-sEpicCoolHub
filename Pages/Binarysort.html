@@ -13,8 +13,9 @@
         <a href="Kleurmodellen.html">Color models</a>
         <a href="Gallery.html">My gallery</a>
         <a href="AboutMe.html">My about me page</a>
-        <a class="active" href="Rekenmachine.html">Calculator</a>
+        <a href="Rekenmachine.html">Calculator</a>
         <a href="Bubblesort.html">Bubblesort</a>
+        <a class="active" href="Binarysort.html">Binarysort</a>
     </div>
 <div class="container">
     <div class="content">
@@ -22,42 +23,40 @@
         <p>You can play guess the number! It goes from 1 to 30.</p>
     <script>
 function main() {
-    // Dit programma laat je een getal raden. Het neemt zelf een getal, jij gokt en het programma vertelt je of jouw getal het goede is, of dat het te hoog of te laag is. Je gokt tot je het goede getal geraden hebt. Dan krijg je ook het aantal pogingen te zien, die jij nodig had.
-    let aantalkeergeraden;
+    // This program lets you guess a number. It generates a random number,
+    // you guess, and the program tells you if your guess is correct, too high, or too low.
+    // You keep guessing until you guess the correct number. Then, it shows you the number of attempts you took.
+    let aantalkeergeraden = 1;
+    let i = Math.floor(Math.random() * 31); // Generate a random number between 0 and 30 (inclusive)
+    let raadgetal;
 
-    aantalkeergeraden = 1;
-    let i;
+    raadgetal = parseInt(prompt('Enter a number between 0 and 30: '));
 
-    i = Math.floor(Math.random() * 30);
-    alert("Geef een getal tussen 0 en 30: ");
-    let raadgetal
-    let giveup
-}
-function Again() {
-    raadgetal.parseInt(prompt('Enter a value for raadgetal'));
+    // In this while loop, the user keeps guessing until the correct number is guessed
+    while (raadgetal !== i) {
+        aantalkeergeraden++;
 
-    // In deze WHILE-lus gebeurt het: Zolang het getal niet geraden is, moet de gebruiker verder raden. De gebruiker krijgt te zien of zijn gok te hoog of te laag is
-    while (raadgetal != i) {
-        aantalkeergeraden = aantalkeergeraden + 1;
         if (raadgetal > i) {
-            alert("Het getal is lager.");
+            alert("The number is lower.");
         } else {
-            alert("Het getal is hoger.");
+            alert("The number is higher.");
         }
-        if (raadgetal != i){
-        Giveup.Parsebol(prompt(`Do you wish to give up?`))
-        if (Giveup = false){
-       return; 
-    }
-}
-}
-}
-    // Hier heeft de gebruiker het geraden. De WHILE-lus is verlaten. De gebruiker krijgt een felicitatie en krijgt te zien in hoeveel keer hij het getal geraden heeft.
-    if (Giveup = true){
-    alert("Het getal was: " + i + " jij gokte: " + raadgetal);
-    }
-    alert("Je hebt het geraden in " + aantalkeergeraden + " keer.");
 
+        let giveup = confirm("Do you wish to give up?");
+        if (giveup) {
+            alert("The number was: " + i);
+            return;
+        }
+
+        raadgetal = parseInt(prompt('Enter a number between 0 and 30: '));
+    }
+
+    // If the loop exits, the correct number has been guessed
+    alert("Congratulations! You guessed the number " + i + " correctly.");
+    alert("You guessed it in " + aantalkeergeraden + " attempts.");
+}
+
+main(); // Call the main function
 </script>
 </body>
 </html>

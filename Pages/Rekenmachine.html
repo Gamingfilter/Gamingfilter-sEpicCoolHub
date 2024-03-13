@@ -16,6 +16,7 @@
         <a href="AboutMe.html">My about me page</a>
         <a class="active" href="Rekenmachine.html">Calculator</a>
         <a href="Bubblesort.html">Bubblesort</a>
+        <a href="Binarysort.html">Binarysort</a>
     </div>
 <div class="container">
     <div class="content">
@@ -23,71 +24,69 @@
         <p>I hope you like it, I guess. Kinda fun function tbh but I am still working on it, so if you have any improvements in mind let me know. This is kind of a fun side thingy I added to the side so I hope you just enjoy it I guess</p>
         </div>
         </div>
-    <script>
-        let x = 0
-        alert(`Test`);
-            let amount = parseInt(prompt(`Enter a value for the amount of numbers`));
-
-            let t = -1;
-            let l = 0;
-            while (amount <= 0 || isNaN(amount)) {
-                amount = parseInt(prompt(`Please enter a valid number greater than 0`));
-            }
-
-            let teken = [];
-            let numbers = [];
-            let operators = [];
-
-            for (let u = 0; x < amount; u++) {
-                numbers[u] = parseFloat(prompt(`Enter a value for what number you want`));
-            }
-
-            for (let y = 1; y < amount; y++) {
-                let operators = parseInt(prompt(`Enter a valid operator (+, -, *, /, %, ^, √)`));
-             
-                while (!(`+`, `-`, `*`, `/`, `%`, `^`, `√`).includes(teken)) {
-                   let operators = parseInt(prompt(`Please enter a valid operator (+, -, *, /, %, ^, √)`));
+            <script>
+                let amount = parseInt(prompt(`Enter a value for the amount of numbers`));
+        
+                while (amount <= 0 || isNaN(amount)) {
+                    amount = parseInt(prompt(`Please enter a valid number greater than 0`));
                 }
-            
-                while ((`%`, `^`, `√`).includes(teken)); {
-                    let num = parseFloat(prompt(`Enter a value for the power/root/modulus`));
-                switch (teken) {
-                    case `%`:
-                        let numbers[t] %= num;
-                    case `^`:
-                        let numbers[t] = Math.pow(numbers[t], num);
-                    case `√`:
-                        let numbers[t] = Math.pow(numbers[t], 1 / num);
+        
+                let numbers = [];
+                let operators = [];
+        
+                for (let u = 0; u < amount; u++) {
+                    numbers[u] = parseFloat(prompt(`Enter a value for number ${u + 1}`));
                 }
-            
-                let operators = prompt(`Enter another valid operator (+, -, *, /)`);
-                }
-            }
-            while (![`+`, `-`, `*`, `/`].includes(teken)) {
-                   let operators = prompt(`Please enter a valid operator (+, -, *, /)`);
-                }
-
-                if numbers[x] = numbers[0]{
-                result = numbers[x]; 
-                }
-                x = x + 1
-                switch (teken) {
-                    case `+`:
-                        result += numbers[x+1];
-                    case `-`:
-                        result -= numbers[x+1];
-                    case `*`:
-                        result *= numbers[x+1];
-                    case `/`:
-                        while (numbers[x+1] === 0) {
-                            alert(`Division by zero is not allowed`);
-                            numbers[x+1]parseInt(prompt(`Fill in a valid number to divide by`))
-                        }
-                        result /= num;
-                        if amount != x+1
-                        return;
+        
+                let result = numbers[0];
+        
+                for (let y = 1; y < amount; y++) {
+                    let operator = prompt(`Enter a valid operator (+, -, *, /, %, ^, √)`);
+        
+                    while (!['+', '-', '*', '/', '%', '^', '√'].includes(operator)) {
+                        operator = prompt(`Please enter a valid operator (+, -, *, /, %, ^, √)`);
                     }
-            alert(`The answer to your calculation is` + result + );
-    </script>
-</body>
-</html>
+        
+                    let num;
+                    
+                    if (['%', '^', '√'].includes(operator)) {
+                        num = parseFloat(prompt(`Enter a value for the power/root/modulus`));
+        
+                        switch (operator) {
+                            case '%':
+                                result %= num;
+                                break;
+                            case '^':
+                                result = Math.pow(result, num);
+                                break;
+                            case '√':
+                                result = Math.pow(result, 1 / num);
+                                break;
+                        }
+                    } else {
+                        num = parseFloat(prompt(`Enter a value for number ${y + 1}`));
+                        switch (operator) {
+                            case '+':
+                                result += num;
+                                break;
+                            case '-':
+                                result -= num;
+                                break;
+                            case '*':
+                                result *= num;
+                                break;
+                            case '/':
+                                while (num === 0) {
+                                    alert(`Division by zero is not allowed`);
+                                    num = parseFloat(prompt(`Fill in a valid number to divide by`));
+                                }
+                                result /= num;
+                                break;
+                        }
+                    }
+                }
+        
+                alert(`The answer to your calculation is: ${result}`);
+            </script>
+        </body>
+        </html>
