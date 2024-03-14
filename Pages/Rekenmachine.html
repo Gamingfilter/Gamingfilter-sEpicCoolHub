@@ -37,7 +37,7 @@
                 for (let u = 0; u < amount; u++) {
                     numbers[u] = parseFloat(prompt(`Enter a value for number ${u + 1}`));
                 }
-
+                let PowerWOOHOO
                 let y = 1;
                 let num;
                 let result = numbers[0];
@@ -51,11 +51,9 @@
                     num = parseFloat(prompt(`Enter a value for the power/root/modulus`));
                     switch (operators[y-1]) {
                             case '%':
-                                result %= num;
-                                
+                                result %= num;      
                             case '^':
-                                result = Math.pow(result, num);
-                                
+                                result ^= num;
                             case '√':
                                 result = Math.pow(result, 1 / num);
                         }
@@ -75,7 +73,7 @@
                                 numbers[y] %= num;
                                 
                             case '^':
-                                numbers[y] = Math.pow(numbers[y], num);
+                                numbers[y] ^= num;
                                 
                             case '√':
                                 numbers[y] = Math.pow(numbers[y], 1 / num);
