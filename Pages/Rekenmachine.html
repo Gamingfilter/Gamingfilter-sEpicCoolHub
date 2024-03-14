@@ -41,19 +41,15 @@
                 let y = 1;
                 let num;
                 let result = numbers[0];
-
-        while (y < amount) {
-                if (y < amount) {
-                    operators[y-1] = prompt(`Enter a valid operator (+, -, *, /, %, ^, √)`);
+                let p = confirm('Do you wish to add a power,modulus or root to the first number?');
+                if (p) {
+                    operators[y-1] = prompt(`Enter a valid operator (%, ^, √)`);
         
-                    while (!['+', '-', '*', '/', '%', '^', '√'].includes(operators)) {
-                        operators[y-1] = prompt(`Please enter a valid operator (+, -, *, /, %, ^, √)`);
+                    while (!['%', '^', '√'].includes(operators[y-1])) {
+                        operators[y-1] = prompt(`Please enter a valid operator (%, ^, √)`);
                     }
-                    
-                    if (['%', '^', '√'].includes(operator)) {
-                        num = parseFloat(prompt(`Enter a value for the power/root/modulus`));
-        
-                        switch (operator) {
+                    num = parseFloat(prompt(`Enter a value for the power/root/modulus`));
+                    switch (operators[y-1]) {
                             case '%':
                                 result %= num;
                                 
@@ -63,13 +59,34 @@
                             case '√':
                                 result = Math.pow(result, 1 / num);
                         }
+                }
+
+        while (y < amount) {
+                    operators[y] = prompt(`Enter a valid operator (+, -, *, /, %, ^, √)`);
+        
+                    while (!['+', '-', '*', '/', '%', '^', '√'].includes(operators[y])) {
+                        operators[y] = prompt(`Please enter a valid operator (+, -, *, /, %, ^, √)`);
                     }
-                    while (!['+', '-', '*', '/'].includes(operator)) {
-                        operators[y-1] = prompt(`Please enter a valid operator (+, -, *, /)`); 
+                    if (['%', '^', '√'].includes(operators[y])) {
+                        num = parseFloat(prompt(`Enter a value for the power/root/modulus`));
+        
+                        switch (operators[y]) {
+                            case '%':
+                                numbers[y] %= num;
+                                
+                            case '^':
+                                numbers[y] = Math.pow(numbers[y], num);
+                                
+                            case '√':
+                                numbers[y] = Math.pow(numbers[y], 1 / num);
+                        }
+                    }
+                    while (!['+', '-', '*', '/'].includes(operators[y])) {
+                        operators[y] = prompt(`Please enter a valid operator (+, -, *, /)`); 
                     }
 
-                    if (['+', '-', '*', '/'].includes(operators[y-1])) {
-                        switch (operators[y-1]) {
+                    if (['+', '-', '*', '/'].includes(operators[y])) {
+                        switch (operators[y]) {
                             case '+':
                                 result += numbers[y];
                                 y = y+1;
@@ -89,7 +106,6 @@
                         }
                     }
                 }
-            }
                 alert(`The answer to your calculation is: ${result}`);
             </script>
         </body>
