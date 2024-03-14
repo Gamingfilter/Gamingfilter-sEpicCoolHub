@@ -37,17 +37,18 @@
                 for (let u = 0; u < amount; u++) {
                     numbers[u] = parseFloat(prompt(`Enter a value for number ${u + 1}`));
                 }
-        
+
+                let y = 1;
+                let num;
                 let result = numbers[0];
+
+        while (y < amount) {
+                if (y < amount) {
+                    operators[y-1] = prompt(`Enter a valid operator (+, -, *, /, %, ^, √)`);
         
-                for (let y = 1; y < amount; y++) {
-                    let operator = prompt(`Enter a valid operator (+, -, *, /, %, ^, √)`);
-        
-                    while (!['+', '-', '*', '/', '%', '^', '√'].includes(operator)) {
-                        operator = prompt(`Please enter a valid operator (+, -, *, /, %, ^, √)`);
+                    while (!['+', '-', '*', '/', '%', '^', '√'].includes(operators)) {
+                        operators[y-1] = prompt(`Please enter a valid operator (+, -, *, /, %, ^, √)`);
                     }
-        
-                    let num;
                     
                     if (['%', '^', '√'].includes(operator)) {
                         num = parseFloat(prompt(`Enter a value for the power/root/modulus`));
@@ -64,30 +65,31 @@
                         }
                     }
                     while (!['+', '-', '*', '/'].includes(operator)) {
-                        operator = prompt(`Please enter a valid operator (+, -, *, /)`); 
+                        operators[y-1] = prompt(`Please enter a valid operator (+, -, *, /)`); 
                     }
-                        switch (operator) {
+
+                    if (['+', '-', '*', '/'].includes(operators[y-1])) {
+                        switch (operators[y-1]) {
                             case '+':
-                                result += number[y+1];
-                                break;
+                                result += numbers[y];
+                                y = y+1;
                             case '-':
-                                result -= number[y+1];
-                                break;
+                                result -= numbers[y];
+                                y = y+1;
                             case '*':
-                                result *= number[y+1];
-                                break;
+                                result *= numbers[y];
+                                y = y+1;
                             case '/':
-                                while (number[y+1] === 0) {
+                                while (numbers[y] === 0) {
                                     alert(`Division by zero is not allowed`);
-                                    number[y+1] = parseFloat(prompt(`Fill in a valid number to divide by`));
+                                    numbers[y] = parseFloat(prompt(`Fill in a valid number to divide by`));
                                 }
-                                result /= number[y+1];
-                                break;
+                                result /= numbers[y];
+                                y = y+1;
                         }
                     }
-                
-
-        
+                }
+            }
                 alert(`The answer to your calculation is: ${result}`);
             </script>
         </body>
