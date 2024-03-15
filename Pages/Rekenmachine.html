@@ -86,21 +86,19 @@
                         switch (operators[y]) {
                             case '+':
                                 result += numbers[y];
-                                y += 1;
                             case '-':
                                 result -= numbers[y];
-                                y += 1;
+
                             case '/':
                                 if (numbers[y]===0) {
                                     numbers[y] = parseFloat(prompt('Enter a valid number, since you can not devide by zero.'));
                                 }
                                 result /= numbers[y];
-                                y += 1;
                             case '*':
                                 result *= numbers[y];
-                                y += 1;
                               }
                             }
+                            y += 1;
                         }
                 alert(`The answer to your calculation is: ${result}`);
             </script>
