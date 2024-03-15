@@ -88,12 +88,15 @@
                             case '+':
                                 result = result + numbers[y];
                                 y = y+1;
+                                break;
                             case '-':
                                 result = result - numbers[y];
                                 y = y+1;
+                                break;
                             case '*':
                                 result = result * numbers[y];
                                 y = y+1;
+                                break;
                             case '/':
                                 while (numbers[y] === 0) {
                                     alert(`Division by zero is not allowed`);
@@ -101,6 +104,7 @@
                                 }
                                 result /= numbers[y];
                                 y = y+1;
+                                break;
                         }
                     }
                 }
