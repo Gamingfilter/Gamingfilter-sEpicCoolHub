@@ -51,10 +51,15 @@
                     switch (operators[y-1]) {
                             case '%':
                                 result %= num;      
+                                break;
                             case '^':
                                 result **= num;
+                                break;
                             case '√':
                                 result = Math.pow(result, 1 / num);
+                                break;
+                            default:
+                              break;
                         }
                 }
 
@@ -70,12 +75,15 @@
                         switch (operators[y]) {
                             case '%':
                                 numbers[y] %= num;
-                                
+                                break;
                             case '^':
                                 numbers[y] **= num;
-                                
+                                break;
                             case '√':
                                 numbers[y] = Math.pow(numbers[y], 1 / num);
+                                break;
+                            default:
+                                break;
                         }
                     }
                     while (!['+', '-', '*', '/'].includes(operators[y])) {
@@ -86,16 +94,21 @@
                         switch (operators[y]) {
                             case '+':
                                 result = result + numbers[y];
+                                break;
                             case '-':
                                 result = result - numbers[y];
-
+                                break;
                             case '/':
-                                if (numbers[y]===0) {
+                                 while (numbers[y]===0) {
                                     numbers[y] = parseFloat(prompt('Enter a valid number, since you can not devide by zero.'));
                                 }
                                 result = result / numbers[y];
+                                break;
                             case '*':
                                 result = result * numbers[y];
+                                break;
+                            default:
+                                break;
                               }
                             }
                             y += 1;
