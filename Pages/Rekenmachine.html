@@ -83,28 +83,25 @@
                     }
 
                     if (['+', '-', '*', '/'].includes(operators[y])) {
-                            if (operators[y] = '+'){
-                                result = result + numbers[y];
-                                y = y+1;
-                            }
-                            if (operators[y] = '-'){
-                                result = result - numbers[y];
-                                y = y+1;
-                        }
-                            if (operators[y] = '*'){
-                                result = result * numbers[y];
-                                y = y+1;
-                    }
-                            if (operators[y] = '/') {
-                                while (numbers[y] === 0) {
-                                    alert(`Division by zero is not allowed`);
-                                    numbers[y] = parseFloat(prompt(`Fill in a valid number to divide by`));
+                        switch (operators[y]) {
+                            case '+':
+                                result += numbers[y];
+                                y += 1;
+                            case '-':
+                                result -= numbers[y];
+                                y += 1;
+                            case '/':
+                                if (numbers[y]===0) {
+                                    numbers[y] = parseFloat(prompt('Enter a valid number, since you can not devide by zero.'));
                                 }
                                 result /= numbers[y];
-                                y = y+1;
+                                y += 1;
+                            case '*':
+                                result *= numbers[y];
+                                y += 1;
+                              }
                             }
                         }
-                    }
                 alert(`The answer to your calculation is: ${result}`);
             </script>
         </body>
