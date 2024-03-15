@@ -85,17 +85,17 @@
                     if (['+', '-', '*', '/'].includes(operators[y])) {
                         switch (operators[y]) {
                             case '+':
-                                result += numbers[y];
+                                result = result + numbers[y];
                             case '-':
-                                result -= numbers[y];
+                                result = result - numbers[y];
 
                             case '/':
                                 if (numbers[y]===0) {
                                     numbers[y] = parseFloat(prompt('Enter a valid number, since you can not devide by zero.'));
                                 }
-                                result /= numbers[y];
+                                result = result / numbers[y];
                             case '*':
-                                result *= numbers[y];
+                                result = result * numbers[y];
                               }
                             }
                             y += 1;
