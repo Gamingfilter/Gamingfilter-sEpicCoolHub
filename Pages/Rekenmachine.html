@@ -37,7 +37,6 @@
                 for (let u = 0; u < amount; u++) {
                     numbers[u] = parseFloat(prompt(`Enter a value for number ${u + 1}`));
                 }
-                let PowerWOOHOO
                 let y = 1;
                 let num;
                 let result = numbers[0];
@@ -84,30 +83,28 @@
                     }
 
                     if (['+', '-', '*', '/'].includes(operators[y])) {
-                        switch (operators[y]) {
-                            case '+':
+                            if (operators[y] = '+'){
                                 result = result + numbers[y];
                                 y = y+1;
-                                break;
-                            case '-':
+                            }
+                            if (operators[y] = '-'){
                                 result = result - numbers[y];
                                 y = y+1;
-                                break;
-                            case '*':
+                        }
+                            if (operators[y] = '*'){
                                 result = result * numbers[y];
                                 y = y+1;
-                                break;
-                            case '/':
+                    }
+                            if (operators[y] = '/') {
                                 while (numbers[y] === 0) {
                                     alert(`Division by zero is not allowed`);
                                     numbers[y] = parseFloat(prompt(`Fill in a valid number to divide by`));
                                 }
                                 result /= numbers[y];
                                 y = y+1;
-                                break;
+                            }
                         }
                     }
-                }
                 alert(`The answer to your calculation is: ${result}`);
             </script>
         </body>
