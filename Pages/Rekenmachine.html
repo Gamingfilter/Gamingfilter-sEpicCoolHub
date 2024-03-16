@@ -25,7 +25,7 @@
         </div>
         </div>
             <script>
-                let amount = parseInt(prompt(`Enter a value for the amount of numbers`));
+                let amount = parseInt(prompt(`Enter a value for the amount of numbers`)); // This asks about the amount of numbers, parseInt is for integers, parsefloat for any number. I use breaks to not make it go on and get NaN as an answer while to have it not to be smt etc
         
                 while (amount <= 0 || isNaN(amount)) {
                     amount = parseInt(prompt(`Please enter a valid number greater than 0`));
