@@ -74,6 +74,8 @@ display: none;
     background-color: #5874db;
     color: #192c8c;
   }
+
+  .dropdown > li:hover { background:#90a4ec}
 /*For the little boxes you see*/
 .container {
   max-width: 90%;
