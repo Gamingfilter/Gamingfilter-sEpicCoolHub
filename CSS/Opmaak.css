@@ -75,7 +75,15 @@ display: none;
     color: #192c8c;
   }
 
-  .dropdown > li:hover { background:#90a4ec}
+  .dropdown > li:hover {
+    background:#90a4ec; 
+    float: left;
+    color: #131729;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+  }
 /*For the little boxes you see*/
 .container {
   max-width: 90%;
