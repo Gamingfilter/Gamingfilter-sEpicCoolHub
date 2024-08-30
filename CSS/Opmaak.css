@@ -128,9 +128,9 @@ display: none;
 {
     position: relative;
     height: 30px;
-    background: #999999;
+    background: #376aac;
 }
-.second-level-menu > li:hover { background: #CCCCCC; }
+.second-level-menu > li:hover { background: #43a2b9; }
 
 .top-level-menu
 {
@@ -145,9 +145,9 @@ display: none;
     float: left;
     height: 30px;
     width: 150px;
-    background: #999999;
+    background: #5660f1;
 }
-.top-level-menu > li:hover { background: #CCCCCC; }
+.top-level-menu > li:hover { background: #132275; }
 
 .top-level-menu li:hover > ul
 {
@@ -161,15 +161,16 @@ display: none;
 .top-level-menu a /* Apply to all links inside the multi-level menu */
 {
     font: bold 14px Arial, Helvetica, sans-serif;
-    color: #FFFFFF;
+    color: #000000;
     text-decoration: none;
     padding: 0 0 0 10px;
+    background-color: #2b55bd;
 
     /* Make the link cover the entire list item-container */
     display: block;
     line-height: 30px;
 }
-.top-level-menu a:hover { color: #000000; }
+.top-level-menu a:hover { color: #000000; background-color: #2b55bd; }
 /*For the little boxes you see*/
 .container {
   max-width: 90%;
