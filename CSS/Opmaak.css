@@ -74,6 +74,12 @@ display: none;
     background-color: #5874db;
     color: #192c8c;
   }
+  
+  .topnav li:hover > ul
+  {
+      /* On hover, display the next level's menu */
+      display: inline;
+  }
 
   .second-level-menu
 {
