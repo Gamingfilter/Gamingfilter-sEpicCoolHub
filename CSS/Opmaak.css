@@ -53,6 +53,9 @@ display: none;
   .topnav {
     overflow: hidden;
     background-color: #4e67bf;
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
   
   .topnav a {
@@ -61,6 +64,8 @@ display: none;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    display: block;
+    line-height: 30px;
   }
   
   .topnav a:hover {
