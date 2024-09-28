@@ -102,7 +102,7 @@ display: none;
     position: relative;
     float: left;
     height: 30px;
-    width: 150px;
+    width: 200px;
     background: #5660f1;
 }
 .top-level-menu > li:hover { background: #132275; }
